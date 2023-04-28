@@ -54,6 +54,17 @@ function burgerClick() {
 
 burgerClick();
 
+// line 
+
+$(document).on('scroll', function () {
+  if ($(document).scrollTop() > 0) {
+    $('.top__line').addClass('fixed');
+    console.log('top__line');
+  } else {
+    $('.top__line').removeClass('fixed');
+  }
+});
+
 // cta form
 
 function ctaClick() {
