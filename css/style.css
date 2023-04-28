@@ -1232,7 +1232,6 @@ body.lock {
 .about {
   padding-top: 395px;
   position: relative;
-  overflow-x: hidden;
 }
 @media only screen and (min-width: 1226px) {
   .about {
