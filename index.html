@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#B8FF1F" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <title>КОЛО XADY - Лінивий фітнес | Диво-результат</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+
+<header id="header" class="header">
+    <a class="header__link" href="#header">
+      <img
+        class="header__logo"
+        src="img/logo.svg"
+        alt="логотип"
+        width="48"
+        height="37"
+      />
+    </a>
+    <img
+      class="header__logo-about"
+      src="img/logo-about.svg"
+      alt="Лінивий фітнес та диво результат"
+    />
+
+    <nav class="header__menu">
+      <ul class="header__menu-list">
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="#time">лише 15 хвилин!</a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="#without">Фітнес без заморочок</a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="#trainer"
+            >Шість тренажерів, що замінюють всі!</a
+          >
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="#return">100% манібек</a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="#location">Прийти на перше Коло</a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="#location">Контакти</a>
+        </li>
+      </ul>
+    </nav>
+
+    <ul class="social__list">
+      <li class="social__item">
+        <a class="social__link" href="#" target="_blank">
+          <svg class="social__link-icon">
+            <use xlink:href="img/sprite.svg#instagram"></use>
+          </svg>
+        </a>
+        <span class="sr-only">Перейти до Instagram сторінки</span>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#" target="_blank">
+          <svg class="social__link-icon">
+            <use xlink:href="img/sprite.svg#telegram"></use>
+          </svg>
+        </a>
+        <span class="sr-only">Перейти до месенжеру Telegram</span>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#" target="_blank">
+          <svg class="social__link-icon">
+            <use xlink:href="img/sprite.svg#whatsapp"></use>
+          </svg>
+        </a>
+        <span class="sr-only">Перейти до месенжеру Whatsapp</span>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#" target="_blank">
+          <svg class="social__link-icon">
+            <use xlink:href="img/sprite.svg#facebook"></use>
+          </svg>
+        </a>
+        <span class="sr-only">Перейти до Facebook сторінки</span>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#" target="_blank">
+          <svg class="social__link-icon">
+            <use xlink:href="img/sprite.svg#viber"></use>
+          </svg>
+        </a>
+        <span class="sr-only">Перейти до месенжеру Viber</span>
+      </li>
+    </ul>
+
+    <button class="burger" type="button">
+      <svg
+        class="burger__icone"
+        width="32"
+        height="24"
+        viewBox="0 0 32 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1.61191 4.28899C1.61191 3.74912 1.64093 3.20925 1.72799 2.66937C1.81504 2.1295 1.96013 1.64961 2.13425 1.16973C2.30836 0.689838 2.56952 0.329923 2.83069 0C7.53168 0 12.2617 0 16.9917 0.119972C21.7217 0.239944 26.4517 0.359916 31.2107 0.509881C31.2397 0.959775 31.2688 1.43966 31.2107 1.91955C31.2107 2.42943 31.1237 2.87933 31.0076 3.29923C30.8915 3.71913 30.7464 4.04905 30.5433 4.34898C30.3402 4.61892 30.108 4.76888 29.7888 4.79888C27.8736 4.88885 25.7843 4.88885 23.5208 4.79888C21.2284 4.7089 18.8779 4.61892 16.4113 4.52894C13.9448 4.43896 11.4492 4.34898 8.89554 4.259C6.34192 4.16902 1.61191 4.85886 1.61191 4.31899V4.28899Z"
+          fill="#B8FF1F"
+        />
+        <path
+          d="M30.021 13.9767C25.2039 14.1267 20.4449 14.2467 15.6859 14.3666C10.9268 14.4866 6.19683 14.5166 1.49584 14.4566C1.32173 14.1567 1.23467 13.7668 1.23467 13.2869C1.23467 12.807 1.26369 12.2971 1.37977 11.7572C1.46682 11.2174 1.64093 10.6775 1.84406 10.1076C2.04719 9.56776 6.51603 10.2576 9.09867 10.1676C11.6813 10.0776 14.2349 9.98766 16.7305 9.89768C19.2261 9.8077 21.6346 9.68773 23.9271 9.59775C26.2486 9.50777 28.3379 9.50777 30.1951 9.59775C30.5143 9.59775 30.7174 9.77771 30.8045 10.0476C30.8915 10.3476 30.9205 10.7075 30.8915 11.1274C30.8625 11.5473 30.7464 12.0272 30.6013 12.5371C30.4272 13.0469 30.2531 13.5268 30.05 14.0067L30.021 13.9767Z"
+          fill="#B8FF1F"
+        />
+        <path
+          d="M1.20566 23.7844C1.06056 23.2446 0.973508 22.7047 0.94449 22.1948C0.915471 21.6549 0.94449 21.145 1.00253 20.6952C1.06056 20.2453 1.20566 19.8254 1.40878 19.5254C6.10977 19.3455 10.8398 19.2255 15.5988 19.1955C20.3578 19.1955 25.1169 19.1655 29.9049 19.1955C30.05 19.6454 30.1661 20.1253 30.2531 20.6052C30.3402 21.1151 30.3982 21.5649 30.3692 21.9848C30.3692 22.4047 30.2821 22.7347 30.1661 23.0346C30.05 23.3345 29.8178 23.4845 29.4986 23.5145C27.6124 23.6645 25.5231 23.7244 23.2307 23.6944C20.9382 23.6944 18.5297 23.6345 16.0631 23.6045C13.5675 23.6045 11.0429 23.5445 8.48928 23.5445C5.93566 23.5445 1.35075 24.3543 1.20566 23.8144V23.7844Z"
+          fill="#B8FF1F"
+        />
+      </svg>
+      <svg
+        class="burger__icone--close"
+        width="32"
+        height="29"
+        viewBox="0 0 32 29"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0.585133 0.552491C0.959888 0.213219 1.46812 0.0226168 1.99806 0.0226168C2.52797 0.0226168 3.0362 0.213219 3.41098 0.552491L15.9874 11.9412L28.5638 0.552491C28.7481 0.379643 28.9687 0.241777 29.2125 0.146928C29.4563 0.0520799 29.7185 0.00214909 29.9839 6.78938e-05C30.2493 -0.00201331 30.5123 0.0437722 30.7579 0.134766C31.0035 0.22576 31.2268 0.360134 31.4144 0.530068C31.6021 0.699984 31.7504 0.902041 31.8509 1.12446C31.9514 1.34686 32.002 1.58516 31.9996 1.82546C31.9974 2.06576 31.9422 2.30323 31.8375 2.52404C31.7328 2.74483 31.5805 2.94451 31.3897 3.11146L17.4003 15.7797C17.0256 16.119 16.5174 16.3096 15.9874 16.3096C15.4574 16.3096 14.9492 16.119 14.5745 15.7797L0.585133 3.11146C0.210479 2.77208 0 2.31186 0 1.83198C0 1.35211 0.210479 0.891871 0.585133 0.552491Z"
+          fill="white"
+        />
+        <path
+          d="M31.4149 28.4475C31.0401 28.7868 30.5319 28.9774 30.0019 28.9774C29.472 28.9774 28.9638 28.7868 28.589 28.4475L16.0126 17.0588L3.43619 28.4475C3.25193 28.6204 3.0313 28.7582 2.78749 28.8531C2.54367 28.9479 2.28147 28.9979 2.01607 28.9999C1.75068 29.002 1.48768 28.9562 1.24207 28.8652C0.996455 28.7742 0.773224 28.6399 0.585567 28.4699C0.39791 28.3 0.249625 28.098 0.149102 27.8755C0.0485788 27.6531 -0.00198253 27.4148 0.000415661 27.1745C0.00261401 26.9342 0.0577691 26.6968 0.162489 26.476C0.267209 26.2552 0.419493 26.0555 0.610348 25.8885L14.5997 13.2203C14.9744 12.881 15.4826 12.6904 16.0126 12.6904C16.5426 12.6904 17.0508 12.881 17.4255 13.2203L31.4149 25.8885C31.7895 26.2279 32 26.6881 32 27.168C32 27.6479 31.7895 28.1081 31.4149 28.4475Z"
+          fill="white"
+        />
+      </svg>
+
+      <span class="sr-only">Відкрити меню</span>
+    </button>
+</header>
+
+
+<main class="main page__main">
+  <section class="section about">
+  <a class="video__link" href="img/video.mp4" data-fancybox="video-gallery">
+  </a>
+  <div class="video">
+    <div class="video__bg"></div>
+  </div>
+  <div class="container">
+    <h1 class="title about__title">
+      Це лінивий фітнес, який створено щоб змінити відношення людей до тренувань та результату!
+    </h1>
+  </div>
+
+  <div id="time" class="time">
+    <img class="time__img time__img--left" src="img/clock.png" alt="годинник">
+    <div class="time_top"><span class="_underline">говоримо як є:</span></div>
+    <div class="time_midle">
+      <div>лише</div>
+      <div>
+        <svg
+          width="33"
+          height="124"
+          viewBox="0 0 33 124"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M32.7442 119.064C32.7442 122.384 30.7858 123.946 26.9865 123.946C23.1873 123.946 21.2289 122.384 21.2289 119.064V17.104L7.55936 26.0466C6.14933 26.398 5.05263 26.5542 4.07344 26.5542C1.41004 26.5542 0 23.9378 0 18.5489C0 15.5811 0.979192 14.0191 2.93758 13.6676L23.0698 0.507654C24.754 0.156201 26.2815 0 27.8091 0C31.0208 0 32.705 1.75726 32.705 5.23274V119.064H32.7442Z"
+            fill="black"
+          />
+        </svg>
+        <svg
+          width="48"
+          height="125"
+          viewBox="0 0 48 125"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M23.7946 125C16.5094 125 10.7909 122.227 6.59994 116.838C2.409 111.45 0.293945 104.303 0.293945 95.5951V92.2758C0.293945 88.9566 2.09566 87.3946 5.89493 87.3946C9.69419 87.3946 11.7701 88.9566 11.7701 92.2758V95.9466C11.7701 100.984 12.9059 105.006 15.1385 107.974C17.3711 110.942 20.3086 112.309 24.1079 112.309C27.9072 112.309 30.8447 110.903 33.0773 107.974C35.3099 105.006 36.4457 101.023 36.4457 95.9466V75.9138C36.4457 63.2224 32.0981 56.9353 23.5596 56.9353C20.3478 56.9353 16.7052 57.443 12.6318 58.6926C9.69419 59.5517 7.57913 60.0984 6.32577 60.0984C3.66237 60.0984 2.409 58.5364 2.409 55.2171V5.74038C2.409 2.06965 3.81904 0.156189 6.59994 0.156189H42.4384C44.8276 0.156189 46.081 2.22585 46.081 6.40424C46.081 10.5826 44.8276 12.6523 42.4384 12.6523H13.8851V46.4698C17.3711 45.064 21.1703 44.4002 25.2046 44.4002C32.3331 44.4002 37.9341 47.0165 42.0075 52.4055C46.081 57.7944 48.0394 65.0968 48.0394 74.3518V95.5951C48.0394 104.303 45.9243 111.254 41.7334 116.643C37.5424 122.032 31.7848 124.649 24.5387 124.649L23.8337 125H23.7946Z"
+            fill="black"
+          />
+        </svg>
+      </div>
+      <div>хвилин</div>
+    </div>
+    <div class="time_bottom"><span class="_underline">без перевдягань та поту, які:</span></div>
+    <img class="time__img time__img--right" src="img/clock.png" alt="годинник">
+    <span class="time__bg"></span>
+  </div>
+
+  <div class="container">
+    <div id="advantages" class="advantages">
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          <div class="advantages__content">
+            <h3 class="advantages__title">
+              а) ...підлаштуються під <span class="_underline">будь-яку</span> фізичну форму
+            </h3>
+            <p class="advantages__text">
+              Ви ніколи не займались фітнесом, або ви – завзятий спортсмен? –
+              Тренажер в будь-якому випадку підлаштується під ваш рівень й ви
+              отримаєте індивідуальну динаміку вправ!
+            </p>
+          </div>
+          <img
+            class="advantages__img"
+            src="img/people.svg"
+            alt="фізична форма"
+          />
+        </li>
+        <li class="advantages__item">
+          <div class="advantages__content">
+            <h3 class="advantages__title">
+              б) ...пропрацюють <span class="_underline">100% доступ- них</span> м‘язів
+            </h3>
+            <p class="advantages__text">
+              Завдяки спеціально зпроєктованим гідро-тренажерам у вправах
+              реально задіюються 100% м‘язів
+            </p>
+          </div>
+          <img class="advantages__img" src="img/human.png" alt="людина" />
+        </li>
+        <li class="advantages__item">
+          <div class="advantages__content">
+            <h3 class="advantages__title">
+              в) Підтягнуть тіло та збадьорять <span class="_underline">на весь</span>день!
+            </h3>
+            <p class="advantages__text">
+              Кожне Коло зпроєктоване так, щоб ваш організм отримав потужний
+              прилив кисню та ендорфінів
+            </p>
+          </div>
+          <img class="advantages__img" src="img/battery.svg" alt="заряд" />
+        </li>
+      </ul>
+    </div>
+
+    <div id="without" class="without">
+      <div class="without__tite title-bg">і все це...</div>
+      <ul class="without__list">
+        <li class="without__item">без витрати часу на душ та перевдягання</li>
+        <li class="without__item">без складних фітнес-планів та дієт</li>
+        <li class="without__item">без заморочених тренажерів</li>
+        <li class="without__item">без стрьомних тренерів</li>
+        <li class="without__item">без вимог до занять</li>
+        <li class="without__item">у визначений вами час</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  <section id="trainer" class="trainer">
+  <div class="container">
+    <h2 class="trainer__title">
+      Одне Коло Хаду складається з шости гідро-тренажерів, що корисніші за всі
+      існуючі:
+    </h2>
+  </div>
+  <ul class="slider">
+    <li class="slider__item">
+      <div class="slider__item-inner _line">
+        <div class="slider__item-top">
+          <img src="img/count/count-1.svg" alt="номер 1" />
+          <div class="slider__item-subtitle">тренажер перший</div>
+          <div class="slider__item-title">«Нижня перша»</div>
+        </div>
+        <a class="slider__item-link" href="#">Подивитись вправи</a>
+        <img
+          class="slider__item-trainer"
+          src="img/trainer/trainer-1.png"
+          alt="тренажер"
+        />
+      </div>
+    </li>
+    <li class="slider__item">
+      <div class="slider__item-inner _line">
+        <div class="slider__item-top">
+          <img src="img/count/count-2.svg" alt="номер 2" />
+          <div class="slider__item-subtitle">тренажер другий</div>
+          <div class="slider__item-title">«Нижня дуга»</div>
+        </div>
+        <a class="slider__item-link" href="#">Подивитись вправи</a>
+        <img
+          class="slider__item-trainer"
+          src="img/trainer/trainer-2.png"
+          alt="тренажер"
+        />
+      </div>
+    </li>
+    <li class="slider__item">
+      <div class="slider__item-inner _line">
+        <div class="slider__item-top">
+          <img src="img/count/count-3.svg" alt="номер 3" />
+          <div class="slider__item-subtitle">тренажер третій</div>
+          <div class="slider__item-title">«Нижня третя»</div>
+        </div>
+        <a class="slider__item-link" href="#">Подивитись вправи</a>
+        <img
+          class="slider__item-trainer"
+          src="img/trainer/trainer-3.png"
+          alt="тренажер"
+        />
+      </div>
+    </li>
+    <li class="slider__item">
+      <div class="slider__item-inner _no-line">
+        <div class="slider__item-top">
+          <img src="img/count/count-3.svg" alt="номер 4" />
+          <div class="slider__item-subtitle">тренажер четвертий</div>
+          <div class="slider__item-title">«Нижня четверта»</div>
+        </div>
+        <a class="slider__item-link" href="#">Подивитись вправи</a>
+        <img
+          class="slider__item-trainer"
+          src="img/trainer/trainer-4.png"
+          alt="тренажер"
+        />
+      </div>
+    </li>
+    <li class="slider__item">
+      <div class="slider__item-inner _no-line">
+        <div class="slider__item-top">
+          <img src="img/count/count-3.svg" alt="номер 5" />
+          <div class="slider__item-subtitle">тренажер п'ятий</div>
+          <div class="slider__item-title">«Нижня п'ята»</div>
+        </div>
+        <a class="slider__item-link" href="#">Подивитись вправи</a>
+        <img
+          class="slider__item-trainer"
+          src="img/trainer/trainer-5.png"
+          alt="тренажер"
+        />
+      </div>
+    </li>
+  </ul>
+</section>
+
+
+  <section id="return" class="return">
+  <div class="container">
+    <div class="return__inner">
+      <div class="return__title title-bg">МИТТЄВЕ</div>
+      <p class="return__text">повернення грошей, якщо тренування не сподобається!</p>
+    </div>
+  </div>
+</section>
+
+  <section id="location" class="location">
+  <div class="location__top">
+    <div class="container">
+      <div class="location__top-inner">
+        <div class="location__title">Приходьте на <span class="_underline">ваше перше Коло!</span></div>
+        <div class="location__list">
+          <div class="location__list-current">Оберіть ваше місто...</div>
+          <div class="location__list-choice">
+            <div class="location__list-choice-item">Київ</div>
+            <div class="location__list-choice-item">Харків</div>
+            <div class="location__list-choice-item">Дніпро</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="location__bottom">
+    <div class="container">
+      <div class="location__bottom-inner">
+        <div class="location__descr">
+          <address>Проспект Героїв Сталінграда, 14-Б</address>
+          <span>з 10 до 19:00 щодня </span>
+          <a href="tel:380688765430">+38 (068) 876-54-30</a>
+        </div>
+        <div class="location__descr">
+          <address>Пр-т Шевченка 6</address>
+          <span>з 8 до 19:00 щодня </span>
+          <a href="tel:380931465624">+38 (093) 146-56-24</a>
+        </div>
+      </div>
+    </div>
+    <div id="map" class="map"></div>
+
+    <script>
+    window.mapOptions = {
+      zoom: 11,
+      center_lng: 30.447971348432983,
+      center_lat: 50.48937007481597,
+    };
+
+    let markers = [
+      {
+        about: {
+          id: 'Нагірна',
+          lat: 50.50779414136534,
+          lng: 30.513003326523318,
+          address: 'Проспект Героїв Сталінграда, 14-Б',
+          zoom: 18,
+        },
+      },
+      {
+        about: {
+          id: 'Комарова',
+          lat: 50.437835,
+          lng: 30.417479,
+          address: 'Проспект Комарова Афанасійовича, 1',
+          zoom: 18,
+        },
+      },
+    ];
+  </script>
+  </div>
+</section>
+
+
+  <div class="cta">
+    <div class="cta__wrapper">
+      <button class="cta__btn _text-color" type="button">
+        > Записатись або зв‘язатись <
+      </button>
+
+      <div class="cta__inner">
+        <div class="cta__links">
+          <a class="cta__phone" href="tel:380671234567">+38 (067) 123-45-67</a>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link" href="#" target="_blank">
+                <svg class="social__link-icon">
+                  <use xlink:href="img/sprite.svg#telegram"></use>
+                </svg>
+              </a>
+              <span class="sr-only">Перейти до месенжеру Telegram</span>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" target="_blank">
+                <svg class="social__link-icon">
+                  <use xlink:href="img/sprite.svg#whatsapp"></use>
+                </svg>
+              </a>
+              <span class="sr-only">Перейти до месенжеру Whatsapp</span>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" target="_blank">
+                <svg class="social__link-icon">
+                  <use xlink:href="img/sprite.svg#viber"></use>
+                </svg>
+              </a>
+              <span class="sr-only">Перейти до месенжеру Viber</span>
+            </li>
+          </ul>
+        </div>
+  
+        <form class="cta__form">
+          <div class="cta__form-inner">
+            <div class="form__field">
+              <label>Як вас звати:</label>
+              <input
+                class="form__field-input form__field-input--name"
+                type="text"
+                required
+              />
+            </div>
+  
+            <div class="form__field">
+              <label>Ваше запитання:</label>
+              <textarea
+                class="form__field-input form__field-input--text"
+                required
+              ></textarea>
+            </div>
+  
+            <div class="form__field">
+              <label>Ваш email:</label>
+              <input
+                class="form__field-input form__field-input--mail"
+                type="email"
+                required
+              />
+            </div>
+          </div>
+  
+          <button type="submit">відправити</button>
+        </form>
+      </div>
+    </div>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <ul class="social__list">
+      <li class="social__item">
+        <a class="social__link" href="#" target="_blank">
+          <svg class="social__link-icon">
+            <use xlink:href="img/sprite.svg#instagram"></use>
+          </svg>
+        </a>
+        <span class="sr-only">Перейти до Instagram сторінки</span>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#" target="_blank">
+          <svg class="social__link-icon">
+            <use xlink:href="img/sprite.svg#telegram"></use>
+          </svg>
+        </a>
+        <span class="sr-only">Перейти до месенжеру Telegram</span>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#" target="_blank">
+          <svg class="social__link-icon">
+            <use xlink:href="img/sprite.svg#whatsapp"></use>
+          </svg>
+        </a>
+        <span class="sr-only">Перейти до месенжеру Whatsapp</span>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#" target="_blank">
+          <svg class="social__link-icon">
+            <use xlink:href="img/sprite.svg#facebook"></use>
+          </svg>
+        </a>
+        <span class="sr-only">Перейти до Facebook сторінки</span>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#" target="_blank">
+          <svg class="social__link-icon">
+            <use xlink:href="img/sprite.svg#viber"></use>
+          </svg>
+        </a>
+        <span class="sr-only">Перейти до месенжеру Viber</span>
+      </li>
+    </ul>
+
+    <div class="footer__copyright">
+      <span>Розробка сайту - </span>
+      <a href="#" target="_blank">eugene-miller.com</a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_JeppxGTcMz6WXuDDVol5FQ8fMFxAjzs&callback=initMap"
+    defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+    integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/index.js"></script>
+  </body>
+
+  </html>
