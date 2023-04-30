@@ -54,12 +54,11 @@ function burgerClick() {
 
 burgerClick();
 
-// line 
+// line
 
 $(document).on('scroll', function () {
   if ($(document).scrollTop() > 0) {
     $('.top__line').addClass('fixed');
-    console.log('top__line');
   } else {
     $('.top__line').removeClass('fixed');
   }
@@ -95,8 +94,9 @@ ctaClick();
 
 $('.slider').slick({
   infinite: true,
-/*   autoplay: true,
-  autoplaySpeed: 2000, */
+  cssEase: 'easeOutElastic',
+  autoplay: true,
+  autoplaySpeed: 4000,
 });
 
 // скрол до секції
@@ -188,7 +188,6 @@ window.initMap = initMap;
 // location__list-choice відкриття submenu
 
 function subMenuToShow() {
-
   const locationCurrent = document.querySelector('.location__list-current');
   const currentParent = document.querySelector('.location__list-choice');
   const locationContent = document.querySelector('.location__bottom');
@@ -199,26 +198,38 @@ function subMenuToShow() {
       target.classList.toggle('active');
 
       if (target.classList.contains('active')) {
-        $(currentParent).slideDown(500);
+        $(currentParent).slideDown(400);
       } else {
-        $(currentParent).slideUp(500);
+        $(currentParent).slideUp(400);
       }
     });
 
-    const choiceItems = document.querySelectorAll('.location__list-choice-item');
-  
+    const choiceItems = document.querySelectorAll(
+      '.location__list-choice-item'
+    );
+
     choiceItems.forEach((element) => {
       element.addEventListener('click', (event) => {
         const targetText = event.target.textContent;
-        locationCurrent.textContent = targetText;
-        $(currentParent).slideUp(500);
+        locationCurrent.style.fontSize = '0';
+        function changTitle() {
+          locationCurrent.textContent = targetText;
+          locationCurrent.style.fontSize = 'inherit';
+        }
+        setTimeout(changTitle, 600);
+
+        $(currentParent).slideUp(400);
         locationCurrent.classList.remove('active');
-        locationContent.style.display = 'block';
-        locationCurrent.style.width = 'fit-content';
-      })
+        document.querySelector('.location__list').classList.add('city');
+        function mapShow() {
+          locationContent.style.opacity = '1';
+          locationContent.style.height = '100%';
+        }
+        setTimeout(mapShow, 800);
+        document.querySelector('.location__top').classList.add('mb');
+      });
     });
   }
-
 }
 
 subMenuToShow();
