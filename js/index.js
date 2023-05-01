@@ -90,15 +90,6 @@ function ctaClick() {
 
 ctaClick();
 
-// slider
-
-$('.slider').slick({
-  infinite: true,
-  cssEase: 'easeOutElastic',
-  autoplay: true,
-  autoplaySpeed: 4000,
-});
-
 // скрол до секції
 
 var linkNav = document.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
@@ -233,3 +224,22 @@ function subMenuToShow() {
 }
 
 subMenuToShow();
+
+
+// slider
+
+var offset = 600;
+$(window).scroll(function () {
+  var scrolltop = $(this).scrollTop();
+  $('.slider').each(function () {
+    if (scrolltop >= $(this).offset().top - offset) {
+
+      $('.slider').slick({
+        infinite: true,
+        cssEase: 'easeOutElastic',
+        autoplay: true,
+        autoplaySpeed: 4000,
+      });
+    }
+  });
+});
