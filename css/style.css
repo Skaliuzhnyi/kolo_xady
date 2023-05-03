@@ -1307,6 +1307,7 @@ body.lock {
   -webkit-transition: max-width 1.5s ease-in-out;
   -o-transition: max-width 1.5s ease-in-out;
   transition: max-width 1.5s ease-in-out;
+  z-index: 90;
 }
 @media only screen and (min-width: 1226px) {
   .location__list {
