@@ -210,6 +210,7 @@ function subMenuToShow() {
         function mapShow() {
           locationContent.style.opacity = '1';
           locationContent.style.height = '100%';
+          locationContent.style.display = 'block';
         }
         setTimeout(mapShow, 800);
         document.querySelector('.location__top').classList.add('mb');

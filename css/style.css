@@ -1514,12 +1514,10 @@ body.lock {
 .location__bottom {
   opacity: 0;
   height: 0;
+  display: none;
   -webkit-transition: opacity 1.5s;
   -o-transition: opacity 1.5s;
   transition: opacity 1.5s;
-}
-.location__bottom.active {
-  display: block;
 }
 .location__bottom-inner {
   display: -webkit-box;
