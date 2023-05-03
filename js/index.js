@@ -70,21 +70,16 @@ function ctaClick() {
   const body = document.querySelector('body');
   const ctaBtn = document.querySelector('.cta__btn');
   const cta = document.querySelector('.cta');
-  const burgerBtn = document.querySelector('.burger');
-  const menu = document.querySelector('.header');
+  const close = document.querySelector('.cta__btn-close');
 
   ctaBtn.addEventListener('click', () => {
-    let ctaBtnnActive = ctaBtn.classList.contains('active');
+    cta.classList.add('active');
+    body.classList.add('lock');
+  });
 
-    if (!ctaBtnnActive) {
-      burgerBtn.classList.add('cta__active', 'active');
-      cta.classList.add('active');
-      body.classList.add('lock');
-    } else {
-      burgerBtn.classList.remove('cta__active', 'active');
-      cta.classList.remove('active');
-      body.classList.remove('lock');
-    }
+  close.addEventListener('click', () => {
+    cta.classList.remove('active');
+    body.classList.remove('lock');
   });
 }
 
@@ -225,21 +220,60 @@ function subMenuToShow() {
 
 subMenuToShow();
 
-
 // slider
 
-var offset = 600;
-$(window).scroll(function () {
-  var scrolltop = $(this).scrollTop();
-  $('.slider').each(function () {
-    if (scrolltop >= $(this).offset().top - offset) {
+var slickOptions = {
+    autoplay: true,
+    infinite: true,
+    fade: true,
+  },
+  $slick = $('.slider');
 
-      $('.slider').slick({
-        infinite: true,
-        cssEase: 'easeOutElastic',
-        autoplay: true,
-        autoplaySpeed: 4000,
-      });
-    }
-  });
+$slick.slick(slickOptions);
+
+$slick.on('swipe', function (event, slick, direction) {
+  reinitSlick();
+});
+
+$('.slick-prev, .slick-next').on('click', function () {
+  reinitSlick();
+});
+
+var reinitSlick = function () {
+  $slick.slick(
+    'slickSetOption',
+    {
+      autoplay: false,
+    },
+    false
+  );
+};
+
+// липкий header
+const body = document.querySelector('body');
+const scrollUp = 'scroll-up';
+const scrollDown = 'scroll-down';
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll <= 0) {
+    body.classList.remove(scrollUp);
+    return;
+  }
+
+  if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+    // down
+    body.classList.remove(scrollUp);
+    body.classList.add(scrollDown);
+  } else if (
+    currentScroll < lastScroll &&
+    body.classList.contains(scrollDown)
+  ) {
+    // up
+    body.classList.remove(scrollDown);
+    body.classList.add(scrollUp);
+  }
+  lastScroll = currentScroll;
 });
