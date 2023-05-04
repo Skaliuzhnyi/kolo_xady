@@ -373,13 +373,15 @@
   <div class="location__top">
     <div class="container">
       <div class="location__top-inner">
-        <div class="location__title"><span class="_underline">Приходьте на ваше перше Коло!</span></div>
+        <div class="location__title">
+          <span class="_underline">Приходьте на ваше перше Коло!</span>
+        </div>
         <div class="location__list">
           <div class="location__list-current">Оберіть ваше місто...</div>
           <div class="location__list-choice">
-            <div class="location__list-choice-item">Київ</div>
-            <div class="location__list-choice-item">Харків</div>
-            <div class="location__list-choice-item">Дніпро</div>
+            <div class="location__list-choice-item" data-city="kyiv">Київ</div>
+            <div class="location__list-choice-item" data-city="kharkiv">Харків</div>
+            <div class="location__list-choice-item" data-city="dnipro">Дніпро</div>
           </div>
         </div>
       </div>
@@ -387,14 +389,38 @@
   </div>
   <div class="location__bottom">
     <div class="container">
-      <div class="location__bottom-inner">
-        <div class="location__descr">
+      <div class="location__city" data-city="kyiv" data-center_lng="50.46622085713504" data-center_lat="30.499869546088952">
+        <div class="location__city-descr">
           <address>Проспект Героїв Сталінграда, 14-Б</address>
           <span>з 10 до 19:00 щодня </span>
           <a href="tel:380688765430">+38 (068) 876-54-30</a>
         </div>
-        <div class="location__descr">
+        <div class="location__city-descr">
           <address>Пр-т Шевченка 6</address>
+          <span>з 8 до 19:00 щодня </span>
+          <a href="tel:380931465624">+38 (093) 146-56-24</a>
+        </div>
+      </div>
+      <div class="location__city" data-city="kharkiv" data-center_lng="49.99105125963311" data-center_lat="36.23259092630904">
+        <div class="location__city-descr">
+          <address>Харків</address>
+          <span>з 10 до 19:00 щодня </span>
+          <a href="tel:380688765430">+38 (068) 876-54-30</a>
+        </div>
+        <div class="location__city-descr">
+          <address>Харків</address>
+          <span>з 8 до 19:00 щодня </span>
+          <a href="tel:380931465624">+38 (093) 146-56-24</a>
+        </div>
+      </div>
+      <div class="location__city" data-city="dnipro"data-center_lng="48.465385936227776" data-center_lat="35.031848532648205">
+        <div class="location__city-descr">
+          <address>Дніпро</address>
+          <span>з 10 до 19:00 щодня </span>
+          <a href="tel:380688765430">+38 (068) 876-54-30</a>
+        </div>
+        <div class="location__city-descr">
+          <address>Дніпро</address>
           <span>з 8 до 19:00 щодня </span>
           <a href="tel:380931465624">+38 (093) 146-56-24</a>
         </div>
@@ -403,33 +429,23 @@
     <div id="map" class="map"></div>
 
     <script>
-    window.mapOptions = {
-      zoom: 11,
-      center_lng: 30.447971348432983,
-      center_lat: 50.48937007481597,
-    };
-
-    let markers = [
-      {
-        about: {
-          id: 'Нагірна',
-          lat: 50.50779414136534,
-          lng: 30.513003326523318,
-          address: 'Проспект Героїв Сталінграда, 14-Б',
-          zoom: 18,
+      let markers = [
+        {
+          about: {
+            lat: 50.50779414136534,
+            lng: 30.513003326523318,
+            address: 'Проспект Героїв Сталінграда, 14-Б',
+          },
         },
-      },
-      {
-        about: {
-          id: 'Комарова',
-          lat: 50.437835,
-          lng: 30.417479,
-          address: 'Проспект Комарова Афанасійовича, 1',
-          zoom: 18,
+        {
+          about: {
+            lat: 50.437835,
+            lng: 30.417479,
+            address: 'Проспект Комарова Афанасійовича, 1',
+          },
         },
-      },
-    ];
-  </script>
+      ];
+    </script>
   </div>
 </section>
 

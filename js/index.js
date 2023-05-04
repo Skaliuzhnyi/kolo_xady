@@ -136,14 +136,15 @@ function makeСhoice() {
 makeСhoice();
 
 // карта
+let map;
 
 function initMap() {
-  let map = new google.maps.Map(document.getElementById('map'), {
+  map = new google.maps.Map(document.getElementById('map'), {
     center: {
-      lng: window.mapOptions['center_lng'],
-      lat: window.mapOptions['center_lat'],
+      lng: 50.46622085713504,
+      lat: 30.499869546088952,
     },
-    zoom: window.mapOptions['zoom'],
+    zoom: 11,
     streetViewControl: false,
     disableDefaultUI: true,
     zoomControl: false,
@@ -152,31 +153,37 @@ function initMap() {
   for (let i = 0; i < markers.length; i++) {
     const marker = new google.maps.Marker({
       position: markers[i].about,
-      icon: window.mapOptions.marker_ico,
       map: map,
       optimized: false,
     });
 
     marker.addListener('click', () => {
-      map.setCenter(
-        {
-          lat: +markers[i].about.lat,
-          lng: +markers[i].about.lng,
-        },
-        18
-      );
+      setMapCenter(markers[i].about.lat, markers[i].about.lng);
     });
   }
 }
 
 window.initMap = initMap;
 
+function setMapCenter(latCenter, lngCenter) {
+  map.setCenter(
+    {
+      lat: +latCenter,
+      lng: +lngCenter,
+    },
+    18
+  );
+}
+
 // location__list-choice відкриття submenu
 
+const locationCurrent = document.querySelector('.location__list-current');
+const currentParent = document.querySelector('.location__list-choice');
+const locationContent = document.querySelector('.location__bottom');
+const choiceItems = document.querySelectorAll('.location__list-choice-item');
+const locationCity = document.querySelectorAll('.location__city');
+
 function subMenuToShow() {
-  const locationCurrent = document.querySelector('.location__list-current');
-  const currentParent = document.querySelector('.location__list-choice');
-  const locationContent = document.querySelector('.location__bottom');
 
   if (locationCurrent) {
     locationCurrent.addEventListener('click', (event) => {
@@ -190,9 +197,7 @@ function subMenuToShow() {
       }
     });
 
-    const choiceItems = document.querySelectorAll(
-      '.location__list-choice-item'
-    );
+    
 
     choiceItems.forEach((element) => {
       element.addEventListener('click', (event) => {
@@ -214,6 +219,20 @@ function subMenuToShow() {
         }
         setTimeout(mapShow, 800);
         document.querySelector('.location__top').classList.add('mb');
+
+        locationCity.forEach((city) => {
+          city.classList.remove('visible');
+
+          if (
+            city.getAttribute('data-city') === element.getAttribute('data-city')
+          ) {
+            city.classList.add('visible');
+            setMapCenter(
+              city.getAttribute('data-center_lng'),
+              city.getAttribute('data-center_lat')
+            );
+          }
+        });
       });
     });
   }

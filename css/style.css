@@ -353,6 +353,16 @@ body.lock {
   z-index: 100;
   padding: 44px 30px 64px;
   overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .header.active .header__link {
   background-color: #1D1D1B;
@@ -445,7 +455,7 @@ body.lock {
   bottom: 0;
   left: 0;
   background-color: #000000;
-  padding: 23px 18px 16px 16px;
+  padding: 23px 18px 20px 16px;
   font-size: 22px;
   line-height: 2px;
 }
@@ -454,7 +464,8 @@ body.lock {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    padding: 27px 15px 19px 13px;
+    padding: 27px 15px 28px 13px;
+    left: 9px;
   }
 }
 .cta.active {
@@ -1519,7 +1530,7 @@ body.lock {
   -o-transition: opacity 1.5s;
   transition: opacity 1.5s;
 }
-.location__bottom-inner {
+.location__city {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1529,9 +1540,10 @@ body.lock {
           flex-direction: column;
   grid-gap: 24px;
   margin-bottom: 37px;
+  display: none;
 }
 @media only screen and (min-width: 1226px) {
-  .location__bottom-inner {
+  .location__city {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1543,22 +1555,27 @@ body.lock {
     margin-bottom: 74px;
   }
 }
-.location__descr {
+.location__city.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.location__city-descr {
   font-size: 30px;
   line-height: 42px;
 }
 @media only screen and (min-width: 1226px) {
-  .location__descr {
+  .location__city-descr {
     width: 483px;
   }
 }
-.location__descr address, .location__descr span {
+.location__city-descr address, .location__city-descr span {
   display: inline;
 }
-.location__descr a {
+.location__city-descr a {
   display: inline-block;
 }
-.location__descr address {
+.location__city-descr address {
   color: #35b6ff;
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
