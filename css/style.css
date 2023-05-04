@@ -404,9 +404,14 @@ body.lock {
 
 .footer {
   background-color: #B8FF1F;
-  padding: 28px 0 19px 0;
+  padding: 28px 0 45px 0;
   font-size: 15px;
   line-height: 42px;
+}
+@media only screen and (min-width: 1226px) {
+  .footer {
+    padding: 28px 0 19px 0;
+  }
 }
 .footer__copyright {
   text-align: center;
